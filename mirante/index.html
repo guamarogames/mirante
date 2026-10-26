@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="pt-BR" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mirante Pizza Bar · Pizza no forno a lenha em Mairiporã</title>
+<meta name="description" content="Pizza assada no forno a lenha, borda tostadinha e um terraço com vista pra serra em Mairiporã. Faça seu pedido online ou venha conhecer o Mirante.">
+<meta name="theme-color" content="#170d08">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/logo.png">
+
+<!-- DEPLOY STEP: troque https://SEU-DOMINIO/ pelo endereço real do site -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mirante Pizza Bar">
+<meta property="og:description" content="Pizza com gosto de lenha e vista pra serra, em Mairiporã.">
+<meta property="og:url" content="https://SEU-DOMINIO/">
+<meta property="og:image" content="https://SEU-DOMINIO/assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=Figtree:wght@400;500;600&family=Grenze+Gotisch:wght@600;800&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/hero-poster.jpg">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Pular para o conteúdo</a>
+
+<!-- ambiente fixo: brilho de brasa, grão e fagulhas subindo -->
+<div class="ambient" aria-hidden="true">
+  <div class="glow g1"></div>
+  <div class="glow g2"></div>
+  <canvas id="embers"></canvas>
+  <div class="grain"></div>
+</div>
+
+<header class="nav" id="nav">
+  <a class="nav-brand" href="#topo" aria-label="Mirante Pizza Bar, início">
+    <img src="assets/logo.png" alt="" width="44" height="44">
+    <span>Mirante <em>Pizza Bar</em></span>
+  </a>
+  <nav aria-label="Principal">
+    <ul class="nav-links">
+      <li><a href="#forno">O forno</a></li>
+      <li><a href="#sabores">Sabores</a></li>
+      <li><a href="#lugar">O lugar</a></li>
+      <li><a href="#visite">Visite</a></li>
+    </ul>
+  </nav>
+  <a class="btn btn-fire btn-sm order-link" href="https://mirante-pizza-bar.netlify.app/" target="_blank" rel="noopener">Peça agora</a>
+</header>
+
+<main id="main" tabindex="-1">
+
+  <!-- HERO: o vídeo roda sozinho, em loop, sem depender do scroll -->
+  <section class="hero" id="topo">
+    <div class="hero-stage" aria-hidden="true">
+      <div class="hero-blur"></div>
+      <video id="heroVideo" class="hero-video" muted loop playsinline preload="none" tabindex="-1" aria-hidden="true"></video>
+      <div class="hero-shade"></div>
+    </div>
+
+    <div class="hero-copy">
+      <h1 class="sr-only">Mirante Pizza Bar, pizza no forno a lenha em Mairiporã</h1>
+      <div class="hero-ctas">
+        <a class="btn btn-fire order-link" href="https://mirante-pizza-bar.netlify.app/" target="_blank" rel="noopener">Fazer meu pedido <span aria-hidden="true">→</span></a>
+        <a class="btn btn-ghost" href="#lugar">Conhecer o lugar</a>
+      </div>
+    </div>
+
+    <a class="scroll-cue" href="#forno" aria-label="Rolar para o conteúdo">
+      <svg viewBox="0 0 24 36" aria-hidden="true"><rect x="1.5" y="1.5" width="21" height="33" rx="10.5"/><circle class="cue-dot" cx="12" cy="11" r="2.6"/></svg>
+    </a>
+  </section>
+
+  <!-- 01 FORNO A LENHA: vídeo da fatia ao lado dos elogios -->
+  <section class="fire section" id="forno">
+    <div class="wrap fire-grid">
+      <figure class="fire-media reveal">
+        <video id="fatiaVideo" class="fire-video" muted loop playsinline preload="none" poster="assets/fatia-poster.jpg" tabindex="-1" aria-hidden="true"></video>
+        <figcaption class="chip fire-chip"><span class="dot" aria-hidden="true"></span>Saindo do forno</figcaption>
+      </figure>
+      <div class="fire-copy reveal">
+        <p class="label"><span>01</span> Forno a lenha</p>
+        <h2 class="display">Já provou pizza de forno a lenha de verdade?</h2>
+        <p class="lede">Aqui a massa vai direto na pedra quente, do ladinho da brasa. Sai com a borda alta e aerada, cheia de pintinhas tostadas, o queijo puxando a cada fatia e aquele perfume de lenha que forno nenhum a gás consegue imitar.</p>
+        <ul class="fire-feats">
+          <li>
+            <span class="feat-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 22c-4 0-6.5-2.8-6.5-6.2 0-3 2-4.8 3-7 .8 1.5 1.5 2.2 2.5 2.5-.5-3 1-6.5 4-9.3-.3 3 1.5 4.8 3 6.8 1.3 1.7 2 3.5 2 5.5C19.5 18.5 16.4 22 12 22z"/></svg></span>
+            Lenha de verdade
+          </li>
+          <li>
+            <span class="feat-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 15c0-4.5 4-7.5 9-7.5s9 3 9 7.5"/><path d="M2 15h20c0 2-1.5 3.5-3.5 3.5h-13C3.5 18.5 2 17 2 15z"/><circle cx="8" cy="12.5" r=".8"/><circle cx="13.5" cy="10.5" r=".8"/><circle cx="16.5" cy="13.5" r=".8"/></svg></span>
+            Borda alta e tostadinha
+          </li>
+          <li>
+            <span class="feat-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l8.5 15.5c-5.4 2.6-11.6 2.6-17 0z"/><path d="M5.2 15.6c4.4 1.8 9.2 1.8 13.6 0"/><circle cx="11" cy="11" r="1.2"/><circle cx="13.6" cy="14" r="1"/><path d="M9.5 18.6v2.4M14.5 18.6v1.6"/></svg></span>
+            Queijo que puxa
+          </li>
+          <li>
+            <span class="feat-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21V8"/><path d="M12 12c-2.5 0-4-1.5-4-4 2.5 0 4 1.5 4 4zM12 12c2.5 0 4-1.5 4-4-2.5 0-4 1.5-4 4zM12 16c-2.5 0-4-1.5-4-4 2.5 0 4 1.5 4 4zM12 16c2.5 0 4-1.5 4-4-2.5 0-4 1.5-4 4zM12 8c-1.5-1-1.5-3.5 0-5 1.5 1.5 1.5 4 0 5z"/></svg></span>
+            Massa leve e crocante
+          </li>
+        </ul>
+        <a class="btn btn-ghost order-link" href="https://mirante-pizza-bar.netlify.app/" target="_blank" rel="noopener">Ver cardápio <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 SABORES (seção farinha, clara) -->
+  <section class="menu section" id="sabores">
+    <svg class="flour-edge top" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60V22c80 14 160-18 260-8s170 30 280 14 190-30 300-18 200 34 320 20 180-26 280-14v44z"/></svg>
+    <div class="wrap menu-grid">
+      <div class="menu-copy">
+        <div class="menu-head reveal">
+          <p class="label"><span>02</span> Do cardápio</p>
+          <h2 class="display">Os queridinhos<br> da casa.</h2>
+          <p class="lede">Uma amostra do que sai do nosso forno. O cardápio completo, com todos os sabores e preços, está no site de pedidos.</p>
+        </div>
+        <ul class="menu-list">
+          <li class="reveal">
+            <h3>Margherita <span class="leader" aria-hidden="true"></span><span class="tag">A clássica</span></h3>
+            <p>Molho de tomate, muçarela derretida e manjericão fresquinho.</p>
+          </li>
+          <li class="reveal">
+            <h3>Carne seca <span class="leader" aria-hidden="true"></span><span class="tag">Das mais pedidas</span></h3>
+            <p>Carne seca desfiada e muito queijo, com o defumado que só a lenha dá.</p>
+          </li>
+          <li class="reveal">
+            <h3>Borda Vulcão <span class="leader" aria-hidden="true"></span><span class="tag">Pra quem ama borda</span></h3>
+            <p>A borda recheada que transborda. Chega na mesa e todo mundo para pra olhar.</p>
+          </li>
+        </ul>
+        <div class="menu-cta reveal">
+          <a class="btn btn-dark order-link" href="https://mirante-pizza-bar.netlify.app/" target="_blank" rel="noopener">Ver cardápio completo <span aria-hidden="true">→</span></a>
+          <p class="fine">Imagens ilustrativas. Sabores e ingredientes podem mudar, e o cardápio online é sempre o mais atualizado.</p>
+        </div>
+      </div>
+
+      <div class="menu-photos reveal" aria-hidden="true">
+        <figure class="mp mp-1"><img src="assets/foto-fatia.jpg" alt="" width="660" height="720" loading="lazy"></figure>
+        <figure class="mp mp-2"><img src="assets/foto-margherita.jpg" alt="" width="560" height="276" loading="lazy"></figure>
+        <span class="mp-stamp">Direto do<br>forno a lenha</span>
+      </div>
+    </div>
+    <svg class="flour-edge bottom" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0v38c90-12 170 18 280 8s170-28 280-14 190 28 300 16 200-30 320-18 180 24 260 12V0z"/></svg>
+  </section>
+
+  <!-- 03 O LUGAR: de tarde e de noite -->
+  <section class="place section" id="lugar">
+    <div class="wrap place-grid">
+      <div class="place-photos reveal">
+        <svg class="sun-arc" viewBox="0 0 400 140" aria-hidden="true">
+          <path class="draw" d="M20 130a180 120 0 0 1 360 0"/>
+          <circle cx="200" cy="40" r="16" class="sun"/>
+          <g class="rays"><path class="draw" d="M200 6v8M234 18l-6 6M166 18l6 6M246 44h-8M154 44h8"/></g>
+        </svg>
+        <div class="stack" id="photoStack">
+          <figure class="shot shot-day">
+            <img src="assets/terraco.jpg" alt="O terraço do Mirante de dia: mesa de madeira, guarda-corpo de vidro e a cidade de Mairiporã espalhada pelos morros sob o céu azul" width="532" height="510" loading="lazy">
+            <figcaption class="chip">De dia</figcaption>
+          </figure>
+          <figure class="shot shot-night">
+            <img src="assets/terraco-noite.jpg" alt="O mesmo terraço à noite: vela acesa na mesa, taças, luzes da cidade lá embaixo e a silhueta da serra" width="900" height="900" loading="lazy">
+            <figcaption class="chip">À noite</figcaption>
+          </figure>
+        </div>
+        <button class="stack-swap" id="stackSwap" type="button">Ver de dia</button>
+      </div>
+      <div class="place-copy reveal">
+        <p class="label"><span>03</span> O mirante</p>
+        <h2 class="display">Não é à toa que<br> o nome é Mirante.</h2>
+        <p class="lede">Mesa no terraço, a cidade espalhada lá embaixo e a serra fechando o horizonte.</p>
+        <ul class="perks">
+          <li><svg class="perk-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 19l6-9 4 5 3-4 7 8z"/></svg>Terraço com vista</li>
+          <li><svg class="perk-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h10v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2zM15 10h2.5a2.5 2.5 0 0 1 0 5H15M5 7c0-2.5 2-3.5 3.5-2.8C9.5 2.5 12.5 2.5 13.5 4.5 15 4 16 5.5 15 7"/></svg>Cerveja gelada</li>
+          <li><svg class="perk-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18h18M6.5 18a5.5 5.5 0 0 1 11 0M12 6v3M4.9 9.9l2.1 2.1M19.1 9.9L17 12M2 14h2M20 14h2"/></svg>Pôr do sol de cortesia</li>
+          <li><svg class="perk-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>Luzes da cidade à noite</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 VISITE / PEÇA -->
+  <section class="visit section" id="visite">
+    <div class="wrap">
+      <div class="visit-head reveal">
+        <p class="label"><span>04</span> Como aproveitar</p>
+        <h2 class="display">Em casa ou<br> aqui em cima.</h2>
+      </div>
+      <div class="visit-grid">
+        <article class="ticket reveal">
+          <p class="ticket-kicker">Em casa</p>
+          <h3>Peça pelo site</h3>
+          <p>Escolha os sabores no nosso cardápio online e faça o pedido em poucos cliques.</p>
+          <ol class="steps">
+            <li><span>1</span>Abra o cardápio</li>
+            <li><span>2</span>Monte o pedido</li>
+            <li><span>3</span>É só esperar a pizza</li>
+          </ol>
+          <a class="btn btn-fire order-link" href="https://mirante-pizza-bar.netlify.app/" target="_blank" rel="noopener">Fazer meu pedido <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="ticket ticket-alt reveal">
+          <p class="ticket-kicker">No mirante</p>
+          <h3>Venha pra mesa</h3>
+          <dl class="info">
+            <div><dt>Endereço</dt><dd>R. Sílvia Maria, 87, Jardim Ester<br>Mairiporã, SP</dd></div>
+            <div><dt>Horário</dt><dd>Terça a domingo, a partir das 16h<br>Segunda o forno descansa</dd></div>
+            <div><dt>Contato</dt><dd><a href="https://wa.me/551144195333" target="_blank" rel="noopener">(11) 4419-5333</a> · <a href="https://www.instagram.com/mirantepizzabar/" target="_blank" rel="noopener">@mirantepizzabar</a></dd></div>
+          </dl>
+          <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Mirante+Pizza+Bar+R.+S%C3%ADlvia+Maria+87+Mairipor%C3%A3" target="_blank" rel="noopener">Como chegar <span aria-hidden="true">↗</span></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FECHAMENTO -->
+  <section class="final section">
+    <div class="final-bg" aria-hidden="true"></div>
+    <div class="wrap final-inner reveal">
+      <h2 class="display final-title">A lenha já<br> tá estalando.</h2>
+      <p class="lede">Sua pizza está a um clique de sair do forno.</p>
+      <a class="btn btn-fire btn-lg order-link" href="https://mirante-pizza-bar.netlify.app/" target="_blank" rel="noopener">Fazer meu pedido <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <img src="assets/logo.png" alt="Mirante" width="64" height="64" loading="lazy">
+      <p>Mirante Pizza Bar<br><span>Pizza no forno a lenha em Mairiporã</span></p>
+    </div>
+    <ul class="foot-links">
+      <li><a class="order-link" href="https://mirante-pizza-bar.netlify.app/" target="_blank" rel="noopener">Cardápio e pedidos</a></li>
+      <li><a href="https://www.instagram.com/mirantepizzabar/" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="https://wa.me/551144195333" target="_blank" rel="noopener">WhatsApp</a></li>
+      <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Mirante+Pizza+Bar+R.+S%C3%ADlvia+Maria+87+Mairipor%C3%A3" target="_blank" rel="noopener">Como chegar</a></li>
+    </ul>
+    <p class="foot-small">R. Sílvia Maria, 87, Jardim Ester, Mairiporã, SP · © 2026 Mirante Pizza Bar</p>
+  </div>
+</footer>
+
+<script src="assets/main.js" defer></script>
+</body>
+</html>
